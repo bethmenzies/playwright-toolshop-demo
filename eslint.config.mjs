@@ -6,7 +6,7 @@ import tseslint from 'typescript-eslint'
 import stylistic from '@stylistic/eslint-plugin'
 
 export default defineConfig(
-  [globalIgnores([".playwright-report/"])],
+  [globalIgnores(["playwright-report/"])],
   js.configs.recommended,
   tseslint.configs.recommended,
   {
