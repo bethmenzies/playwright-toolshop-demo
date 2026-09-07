@@ -3,7 +3,19 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "prepare": "husky"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,json,md}": [
+      "eslint --fix"
+    ]
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/bethmenzies/playwright-toolshop-demo.git"
@@ -17,7 +29,15 @@
   },
   "homepage": "https://github.com/bethmenzies/playwright-toolshop-demo#readme",
   "devDependencies": {
+    "@eslint/js": "^10.0.1",
     "@playwright/test": "^1.63.0",
-    "@types/node": "^26.4.1"
+    "@stylistic/eslint-plugin": "^5.10.0",
+    "@types/node": "^26.4.1",
+    "eslint": "^10.10.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^17.5.0"
+  },
+  "dependencies": {
+    "typescript-eslint": "^8.69.0"
   }
 }
