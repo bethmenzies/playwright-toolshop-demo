@@ -434,3 +434,5 @@ FodyWeavers.xsd
 /blob-report/
 /playwright/.cache/
 /playwright/.auth/
+/cucumber-report/
+**/.features-gen/**/*.spec.js
