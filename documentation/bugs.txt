@@ -1,0 +1,13 @@
+Password strength: strength is rated when text is removed from field
+To reproduce:
+  Given a user is on the registration page
+  When the user enters text into the password field
+  Then the password strength bar displays as zero
+  When the user removes the text from the password field
+  Then the password strength bar rates the text
+Expected behaviour:
+  Given a user is on the registration page
+  When the user enters text into the password field
+  Then the password strength bar rates the text
+  When the user removes the text from the password field
+  Then the password strength bar displays as zero
