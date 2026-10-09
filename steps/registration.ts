@@ -60,6 +60,9 @@ Then('I see {string} error', async ({ page }, errorField) => {
       expect(await registrationPage.passwordError.isVisible()).toBe(true)
       break
     }
+    default: {
+      throw new Error(`Unknown error field: ${errorField}`)
+    }
   }
 })
 
@@ -113,6 +116,9 @@ When('I type {string} in {string}', async ({ page }, value, field) => {
     case 'password': {
       await registrationPage.password.fill(value)
       break
+    }
+    default: {
+      throw new Error(`Unknown field: ${field}`)
     }
   }
 })
@@ -172,6 +178,9 @@ Then('there is no {string} error', async ({ page }, field) => {
     case 'password': {
       expect(await registrationPage.passwordError.isVisible()).toBe(false)
       break
+    }
+    default: {
+      throw new Error(`Unknown error field: ${field}`)
     }
   }
 })
