@@ -2,7 +2,7 @@ import { expect } from '@playwright/test'
 import { createBdd } from 'playwright-bdd'
 import { CartPage } from '../pages/cart-page'
 
-const { Given, When, Then } = createBdd()
+const { Then } = createBdd()
 
 Then('first item is in cart', async ({ page }) => {
   const cartPage = new CartPage(page)

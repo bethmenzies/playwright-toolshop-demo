@@ -1,7 +1,7 @@
 import { expect } from '@playwright/test'
 import { createBdd } from 'playwright-bdd'
 
-const { Given, When, Then } = createBdd()
+const { Given, Then } = createBdd()
 
 Given('I go to {string} page', async ({ page }, pageName) => {
   switch(pageName) {

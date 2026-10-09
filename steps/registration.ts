@@ -2,7 +2,7 @@ import { expect } from '@playwright/test'
 import { createBdd } from 'playwright-bdd'
 import { RegistrationPage } from '../pages/registration-page'
 
-const { Given, When, Then } = createBdd()
+const { When, Then } = createBdd()
 
 When('I click on register', async ({ page }) => {
   const registrationPage = new RegistrationPage(page)
