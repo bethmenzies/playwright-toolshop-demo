@@ -6,8 +6,16 @@ export class RegistrationPage {
 
   // form
   readonly form: Locator
-  readonly dob: Locator
-  readonly phone: Locator
+  readonly firstName: Locator
+  readonly lastName: Locator
+  readonly dateOfBirth: Locator
+  readonly country: Locator
+  readonly postcode: Locator
+  readonly houseNumber: Locator
+  readonly street: Locator
+  readonly city: Locator
+  readonly state: Locator
+  readonly phoneNumber: Locator
   readonly email: Locator
   readonly password: Locator
 
@@ -31,8 +39,16 @@ export class RegistrationPage {
 
     // form
     this.form = page.locator('[data-test="register-form"]')
-    this.dob = page.locator('[data-test="dob"]')
-    this.phone = page.locator('[data-test="phone"]')
+    this.firstName = page.locator('[data-test="first-name"]')
+    this.lastName = page.locator('[data-test="last-name"]')
+    this.dateOfBirth = page.locator('[data-test="dob"]')
+    this.country = page.locator('[data-test="country"]')
+    this.postcode = page.locator('[data-test="postal_code"]')
+    this.houseNumber = page.locator('[data-test="house_number"]')
+    this.street = page.locator('[data-test="street"]')
+    this.city = page.locator('[data-test="city"]')
+    this.state = page.locator('[data-test="state"]')
+    this.phoneNumber = page.locator('[data-test="phone"]')
     this.email = page.locator('[data-test="email"]')
     this.password = page.locator('[data-test="password"]')
 
